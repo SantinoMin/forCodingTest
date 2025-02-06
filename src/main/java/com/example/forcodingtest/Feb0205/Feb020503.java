@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Feb020503 {
 
 
-    class Solution {
+//    class Solution {
         public int solution(int[] array) {
             int answer = 0;
             int maxCount = 0;
@@ -37,7 +37,8 @@ public class Feb020503 {
             // map[2] = 3인 경우, map.put(3,1);
             // map[3] = 3인 경우, map.put(3,2);
 
+            System.out.println("answer" + answer);
             return answer;
         }
     }
-}
+//}
