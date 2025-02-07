@@ -1,0 +1,24 @@
+class Solution {
+    public int[] solution(int money) {
+
+        int jan = 0;
+        int jandon = 0;
+        int[] answer = {jan,jandon};
+
+        if(money % 5500 == 0){
+            jan = money/5500;
+            jandon = 0;         // 없어도 되긴함
+
+            answer[0] = jan;
+            answer[1] = jandon;
+
+        } else {
+            jan = money / 5500;         // money = 15,000원 예시로, jan = 2
+            jandon = money - jan * 5500; // 구매 가능한 2개 x 5500원을 전체값인 money에서 차감
+
+            answer[0] = jan;
+            answer[1] = jandon;
+        }
+        return answer;
+    }
+}

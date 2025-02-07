@@ -1,0 +1,32 @@
+class Solution {
+    public int solution(int price) {
+        int answer = 0;
+
+        if(price >= 100000 && price < 300000){
+            price *= 0.95;
+            answer = price;
+        } else if(price >= 300000 && price < 500000){
+            price *= 0.9;
+            answer = price;
+        } else if(price >= 500000){
+            price *= 0.8;
+            answer = price;
+        } else {
+            answer = price;
+        }
+
+        return answer;
+    }
+}
+
+// 옷가게 할인받기
+// Price가 100,000보다 크고 30만 보다 작으면
+// Price x 0.95
+
+// 30크고 50이하
+// Price x 0.9
+
+// 50이상
+// 0.8
+
+// Else price

@@ -1,0 +1,25 @@
+class Solution {
+    public int solution(int slice, int n) {
+
+        // N % slice == 0
+        // 피자는 n/slice판
+
+        // N % slice 나머지가 0이 아니면
+        // N/slice + 1
+
+        //사람수 n
+        //조각수 slice
+        //피자1판 7
+
+        int answer = 0;
+
+        if(n % slice == 0){
+            answer = n/slice;
+        } else {
+            answer = n/slice + 1;
+
+        }
+
+        return answer;
+    }
+}
