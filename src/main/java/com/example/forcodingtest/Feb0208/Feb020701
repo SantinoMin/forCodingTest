@@ -1,0 +1,14 @@
+class Solution {
+    public int[] solution(int[] num_list) {
+        int[] answer = new int[num_list.length];
+
+        for(int i = 0; i < num_list.length; i++){
+
+            //5번째 값이 첫번째에 오도록
+            //answer[0] = num_list[4]
+            answer[i] = num_list[num_list.length-1-i];
+            //*여기서 -i를 안해주면, i가 1인 경우부터 적용이 안되기에, -i 추가
+        }
+        return answer;
+    }
+}
