@@ -1,0 +1,25 @@
+class Solution {
+    public int[] solution(int[] num_list) {
+
+        int[] answer = new int[2];
+        int jCount = 0;
+        int hCount = 0;
+        // 짝수와 홀수의 개수을 찾으려면, % 했을 때 0으로 떨어지는지, 안 떨어지는지를 기준으로 두기
+        // 그리고 짝수와 홀수 각각 새로운 변수에서 수량 체크하기 = count
+
+        //1. num_list의 길이를 알아야 몇번 체크해야 되는지 확인 + for문에서 적용
+        // [1, 2, 3, 4, 5]	라고 가정하고 해보기
+        for(int i = 0; i < num_list.length; i++){
+            if(num_list[i] % 2 == 0){ // 짝수
+                // jCount++;
+                jCount += 1;
+                answer[0] = jCount;
+            } else { // 홀수
+                // hCount++;
+                hCount += 1;
+                answer[1] = hCount;
+            }
+        }
+        return answer;
+    }
+}
