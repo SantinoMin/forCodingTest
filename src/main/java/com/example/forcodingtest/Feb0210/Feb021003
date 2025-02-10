@@ -1,0 +1,19 @@
+class Solution {
+    public int solution(int n, int k) {
+        // 양꼬치 n, 음료 k
+        // 양꼬치 n=10마다 k--;
+
+        // n이 10보다 크다면, n/10한 몫만큼 k--해주기
+        // n * 12000, k * 2000 --> n / 10나눈 몫 만큼 -k 해주기(10개당 음료 1개 주니깐)
+
+        int answer = 0;
+
+        if(n > 10){
+            k -= n/10;
+            answer = n*12000 + k*2000;
+        } else {
+            answer = n*12000 + k*2000;
+        }
+        return answer;
+    }
+}
