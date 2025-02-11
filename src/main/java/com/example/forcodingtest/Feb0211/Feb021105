@@ -1,0 +1,15 @@
+class Solution {
+    public int solution(int hp) {
+        int answer = 0;
+
+        answer += hp / 5; // hp=24라면 answer은 4
+        hp = hp % 5;
+
+        answer += hp / 3; // hp는 위에서 나눈 후 나머지인 4, 즉 answer = 4 + 1 = 5
+        hp = hp % 3;
+
+        answer += hp / 1;
+
+        return answer;
+    }
+}

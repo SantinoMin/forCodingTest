@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+
+        for(int i = 1; i <= n; i++){
+
+            // 최대공약수 => n % i == 0
+            if(n % i == 0){ // a: 1,2,4,5,10,20 // b: n/i >> 20, 10,,,
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
