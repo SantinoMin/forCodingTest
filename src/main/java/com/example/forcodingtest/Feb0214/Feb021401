@@ -1,0 +1,15 @@
+1. 로또 번호 출력 (로또 번호뽑기 1~45번 중 6개 중복없이)
+
+import java.util.Set;
+import java.util.HashSet;
+ 
+
+Set<Integer> lotto = new HashSet<>();
+
+        while(lotto.size() < 6){
+            int lot = (int)(Math.random() * 45) + 1;
+            lotto.add(lot);        
+        }    
+
+return lotto;
+
