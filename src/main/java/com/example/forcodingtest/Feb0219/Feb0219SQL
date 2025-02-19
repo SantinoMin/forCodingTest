@@ -1,0 +1,8 @@
+// * 문제 : 개발팀의 2024년도 후반기 급여의 합계는?
+
+Select sum(s.salary_amount)
+From member m
+Join department d On m.dep_id = d.dep_id
+Join salary s On m.salary_id = s.salary_id
+where d.dep_name = '개발팀'
+AND s.salary_date BETWEEN '2024-06-01' AND '2024-12-31';
