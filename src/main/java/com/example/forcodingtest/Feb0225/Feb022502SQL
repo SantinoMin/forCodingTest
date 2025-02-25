@@ -1,0 +1,14 @@
+# 통풍,열선,가죽 하나 이상 포함된 자동차 종류 별로 몇 대 인지 출력
+# 자동차 수 컬럼은 CARS로, 결과는 자동차 종류 기준 오름차순
+
+SELECT CAR_TYPE, COUNT(CAR_TYPE) AS CARS
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE 
+OPTIONS like '%열선시트%'
+OR OPTIONS like '%가죽시트%'
+OR OPTIONS like '%통풍시트%'
+GROUP BY CAR_TYPE
+ORDER BY CAR_TYPE ASC
+
+# WHERE OPTIONS IN ('열선시트', '가죽시트', '통풍시트') 조건을 사용하면 
+  OPTIONS 컬럼에 정확히 하나의 값이 포함된 경우만 필터링 됨
